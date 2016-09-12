@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="NetworkDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="NetworkDataStore">
+    <EntitySet Name="Networks" EntityType="NetworkDataStore.Network" store:Type="Tables" Schema="dbo" Table="Network" />
+    <EntitySet Name="Practices" EntityType="NetworkDataStore.Practice" store:Type="Tables" Schema="dbo" Table="Practice" />
+    <EntitySet Name="Providers" EntityType="NetworkDataStore.Provider" store:Type="Tables" Schema="dbo" Table="Provider" />
+  </EntityContainer>
+  <EntityType Name="Network">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Practice">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address1" Type="varchar" MaxLength="100" />
+    <Property Name="Address2" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="Country" Type="varchar" MaxLength="20" />
+    <Property Name="Npi" Type="bigint" />
+    <Property Name="Tin" Type="int" />
+  </EntityType>
+  <EntityType Name="Provider">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="FullName" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address1" Type="varchar" MaxLength="100" />
+    <Property Name="Address2" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="Country" Type="varchar" MaxLength="20" />
+    <Property Name="Npi" Type="bigint" />
+    <Property Name="Tin" Type="int" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <script src="scripts/angular.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.js"></script>
+    <script src="scripts/angular-resource.min.js"></script>
+    <style>
+        body {
+            padding-left: 5em;
+            font-family: Georgia, "Times New Roman",
+                         Times, serif;
+            font-size: 12
+           }
+
+    </style>
+</head>
+<body ng-controller="search">
+   <h3>Network Provider Search</h3>
+<div>
+    <input type="text" ng-model="searchText" placeholder="Search for provider name or npi" style="width:500px;height:20px"/>
+    <input type="submit" value="search" ng-click='queryIndex()'/>
+</div>
+<div>
+    <p>{{totalhits}} results</p></div>
+<div>
+    <p>
+        <ul>
+            <li ng-repeat="p in results">
+                <p>
+                    <div ng-show="p._type=='provider'">
+                        (Provider) Name: {{p._source.fullname }}, Npi: {{p._source.npi}}
+                    </div>
+                    <div ng-show="p._type=='practice'">
+                        (Practice) Name: {{p._source.name }}, Npi: {{p._source.npi}}
+                    </div>
+                </p>
+            </li>
+        </ul>
+    </p>
+</div>
+
+<div>{{error}}</div>
+</body>
+</html>
