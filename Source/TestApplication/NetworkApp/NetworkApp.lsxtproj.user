@@ -4,7 +4,7 @@
     <EnableENC>False</EnableENC>
     <ProjectView>ProjectFiles</ProjectView>
     <StartUpClientProject>NetworkApp.HTMLClient</StartUpClientProject>
-    <SchemaManagementLastSsdlWriteTime>636092920351678310</SchemaManagementLastSsdlWriteTime>
+    <SchemaManagementLastSsdlWriteTime>636093034484192578</SchemaManagementLastSsdlWriteTime>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
   </PropertyGroup>
 </Project>

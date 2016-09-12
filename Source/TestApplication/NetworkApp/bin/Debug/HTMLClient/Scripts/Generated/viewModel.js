@@ -8,9 +8,9 @@
         $toODataString = msls._toODataString,
         $defineShowScreen = msls._defineShowScreen;
 
-    function ViewPracticeScreen(parameters, dataWorkspace) {
+    function AddEditPracticeScreen(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the ViewPracticeScreen screen.
+        /// Represents the AddEditPracticeScreen screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -21,13 +21,13 @@
         /// <field name="Practice" type="msls.application.Practice">
         /// Gets or sets the practice for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.ViewPracticeScreen.Details">
+        /// <field name="details" type="msls.application.AddEditPracticeScreen.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "ViewPracticeScreen", parameters);
+        $Screen.call(this, dataWorkspace, "AddEditPracticeScreen", parameters);
     }
 
     function BrowsePracticeScreens(parameters, dataWorkspace) {
@@ -52,9 +52,9 @@
         $Screen.call(this, dataWorkspace, "BrowsePracticeScreens", parameters);
     }
 
-    function AddEditPracticeScreen(parameters, dataWorkspace) {
+    function ViewPracticeScreen(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the AddEditPracticeScreen screen.
+        /// Represents the ViewPracticeScreen screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -65,21 +65,20 @@
         /// <field name="Practice" type="msls.application.Practice">
         /// Gets or sets the practice for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.AddEditPracticeScreen.Details">
+        /// <field name="details" type="msls.application.ViewPracticeScreen.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "AddEditPracticeScreen", parameters);
+        $Screen.call(this, dataWorkspace, "ViewPracticeScreen", parameters);
     }
 
     msls._addToNamespace("msls.application", {
 
-        ViewPracticeScreen: $defineScreen(ViewPracticeScreen, [
+        AddEditPracticeScreen: $defineScreen(AddEditPracticeScreen, [
             { name: "Practice", kind: "local", type: lightSwitchApplication.Practice }
         ], [
-            { name: "Method" }
         ]),
 
         BrowsePracticeScreens: $defineScreen(BrowsePracticeScreens, [
@@ -92,21 +91,22 @@
         ], [
         ]),
 
-        AddEditPracticeScreen: $defineScreen(AddEditPracticeScreen, [
+        ViewPracticeScreen: $defineScreen(ViewPracticeScreen, [
             { name: "Practice", kind: "local", type: lightSwitchApplication.Practice }
         ], [
+            { name: "Method" }
         ]),
 
-        showViewPracticeScreen: $defineShowScreen(function showViewPracticeScreen(Practice, options) {
+        showAddEditPracticeScreen: $defineShowScreen(function showAddEditPracticeScreen(Practice, options) {
             /// <summary>
-            /// Asynchronously navigates forward to the ViewPracticeScreen screen.
+            /// Asynchronously navigates forward to the AddEditPracticeScreen screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("ViewPracticeScreen", parameters, options);
+            return lightSwitchApplication.showScreen("AddEditPracticeScreen", parameters, options);
         }),
 
         showBrowsePracticeScreens: $defineShowScreen(function showBrowsePracticeScreens(options) {
@@ -121,16 +121,16 @@
             return lightSwitchApplication.showScreen("BrowsePracticeScreens", parameters, options);
         }),
 
-        showAddEditPracticeScreen: $defineShowScreen(function showAddEditPracticeScreen(Practice, options) {
+        showViewPracticeScreen: $defineShowScreen(function showViewPracticeScreen(Practice, options) {
             /// <summary>
-            /// Asynchronously navigates forward to the AddEditPracticeScreen screen.
+            /// Asynchronously navigates forward to the ViewPracticeScreen screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("AddEditPracticeScreen", parameters, options);
+            return lightSwitchApplication.showScreen("ViewPracticeScreen", parameters, options);
         })
 
     });

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\Properties\NetworkData\Practices.lsml" Checksum="CB692F361E43A2CF6585AA6EAA3EA83BD14E8DC6B743DE3F1D6EC49DDFB06CDF" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\Properties\Client.lsml" Checksum="59D363DEE4613D952991A6912E7582A2AF53E49BB7D81A04C06309A9FD2392B7" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\Properties\Proxies.lsml" Checksum="3F32EC4BEDCAAE9BA348B007CFF0B9BB95F89817E77D18270985B77BA5B52C03" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\Screens\PracticeScreens\AddEditPracticeScreen.lsml" Checksum="60EFA1A65185817A521D1EBDDBFF003B7B954608EB9C39E9593B8236AE5E7897" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\Screens\PracticeScreens\BrowsePracticeScreens.lsml" Checksum="E90BDEE2067846E3A132F8DEAB7F0AD6437EC0E64DA7922DADF844DB2C4BFE62" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\Screens\PracticeScreens\ViewPracticeScreen.lsml" Checksum="F946903583A1CCC42C2A3DE6A6D20C74204FAADF68B786534BC210AB5B5EB1E4" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\Properties\NetworkData\Practices.lsml" Checksum="CB692F361E43A2CF6585AA6EAA3EA83BD14E8DC6B743DE3F1D6EC49DDFB06CDF" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\Properties\Client.lsml" Checksum="59D363DEE4613D952991A6912E7582A2AF53E49BB7D81A04C06309A9FD2392B7" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\Properties\Proxies.lsml" Checksum="3F32EC4BEDCAAE9BA348B007CFF0B9BB95F89817E77D18270985B77BA5B52C03" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\Screens\PracticeScreens\AddEditPracticeScreen.lsml" Checksum="60EFA1A65185817A521D1EBDDBFF003B7B954608EB9C39E9593B8236AE5E7897" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\Screens\PracticeScreens\BrowsePracticeScreens.lsml" Checksum="E90BDEE2067846E3A132F8DEAB7F0AD6437EC0E64DA7922DADF844DB2C4BFE62" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\Screens\PracticeScreens\ViewPracticeScreen.lsml" Checksum="F946903583A1CCC42C2A3DE6A6D20C74204FAADF68B786534BC210AB5B5EB1E4" />
   </Documents>
 </ModelDocumentManifest>

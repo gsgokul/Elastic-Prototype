@@ -6,7 +6,6 @@
         <MappingFragment StoreEntitySet="Networks">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -15,12 +14,28 @@
         <MappingFragment StoreEntitySet="Practices">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="Address1" ColumnName="Address1" />
           <ScalarProperty Name="Address2" ColumnName="Address2" />
           <ScalarProperty Name="City" ColumnName="City" />
           <ScalarProperty Name="State" ColumnName="State" />
           <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Providers">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Provider)">
+        <MappingFragment StoreEntitySet="Providers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

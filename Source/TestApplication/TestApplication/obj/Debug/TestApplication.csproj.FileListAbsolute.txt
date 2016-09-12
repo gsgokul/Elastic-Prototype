@@ -17,3 +17,22 @@ C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\TestA
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\TestApplication\bin\Debug\Nest.pdb
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\TestApplication\bin\Debug\Nest.xml
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\TestApplication\bin\Debug\RandomNameGeneratorLibrary.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\TestApplication.exe.config
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\TestApplication.exe
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\TestApplication.pdb
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Elasticsearch.Net.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Nest.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Newtonsoft.Json.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\RandomNameGeneratorLibrary.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\System.Net.Http.Formatting.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\System.Web.Http.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Elasticsearch.Net.pdb
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Elasticsearch.Net.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Nest.pdb
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Nest.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\Newtonsoft.Json.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\System.Net.Http.Formatting.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\bin\Debug\System.Web.Http.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\obj\Debug\TestApplication.csprojResolveAssemblyReference.cache
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\obj\Debug\TestApplication.exe
+C:\GitHub\Elastic-Prototype\Source\TestApplication\TestApplication\obj\Debug\TestApplication.pdb

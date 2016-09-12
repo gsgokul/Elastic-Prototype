@@ -4,29 +4,43 @@
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="Name" />
-      <PropertyRef Name="CreateDate" />
     </Key>
     <Property Name="Id" Type="Edm.Int32" Nullable="false" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100" Unicode="false" />
-    <Property Name="CreateDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
   </EntityType>
   <EntityType Name="Practice">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="Name" />
-      <PropertyRef Name="CreateDate" />
     </Key>
     <Property Name="Id" Type="Edm.Int32" Nullable="false" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100" Unicode="false" />
-    <Property Name="CreateDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
     <Property Name="Address1" Type="Edm.String" MaxLength="100" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Address2" Type="Edm.String" MaxLength="100" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="City" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="State" Type="Edm.String" MaxLength="2" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Country" Type="Edm.String" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Npi" Type="Edm.Int64" ConcurrencyMode="Fixed" />
+    <Property Name="Tin" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="Provider">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="FullName" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="FullName" Type="Edm.String" Nullable="false" MaxLength="100" Unicode="false" />
+    <Property Name="Address1" Type="Edm.String" MaxLength="100" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Address2" Type="Edm.String" MaxLength="100" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="City" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="State" Type="Edm.String" MaxLength="2" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Country" Type="Edm.String" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Npi" Type="Edm.Int64" ConcurrencyMode="Fixed" />
+    <Property Name="Tin" Type="Edm.Int32" ConcurrencyMode="Fixed" />
   </EntityType>
   <EntityContainer Name="NetworkData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Networks" EntityType="LightSwitchApplication.Network" />
     <EntitySet Name="Practices" EntityType="LightSwitchApplication.Practice" />
+    <EntitySet Name="Providers" EntityType="LightSwitchApplication.Provider" />
   </EntityContainer>
 </Schema>

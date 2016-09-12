@@ -1,2 +1,4 @@
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

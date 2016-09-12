@@ -26,9 +26,6 @@ window.myapp = msls.application;
         /// <field name="Name" type="String">
         /// Gets or sets the name for this network.
         /// </field>
-        /// <field name="CreateDate" type="Date">
-        /// Gets or sets the createDate for this network.
-        /// </field>
         /// <field name="details" type="msls.application.Network.Details">
         /// Gets the details for this network.
         /// </field>
@@ -48,9 +45,6 @@ window.myapp = msls.application;
         /// <field name="Name" type="String">
         /// Gets or sets the name for this practice.
         /// </field>
-        /// <field name="CreateDate" type="Date">
-        /// Gets or sets the createDate for this practice.
-        /// </field>
         /// <field name="Address1" type="String">
         /// Gets or sets the address1 for this practice.
         /// </field>
@@ -66,8 +60,54 @@ window.myapp = msls.application;
         /// <field name="Country" type="String">
         /// Gets or sets the country for this practice.
         /// </field>
+        /// <field name="Npi" type="String">
+        /// Gets or sets the npi for this practice.
+        /// </field>
+        /// <field name="Tin" type="Number">
+        /// Gets or sets the tin for this practice.
+        /// </field>
         /// <field name="details" type="msls.application.Practice.Details">
         /// Gets the details for this practice.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function Provider(entitySet) {
+        /// <summary>
+        /// Represents the Provider entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this provider.
+        /// </param>
+        /// <field name="Id" type="Number">
+        /// Gets or sets the id for this provider.
+        /// </field>
+        /// <field name="FullName" type="String">
+        /// Gets or sets the fullName for this provider.
+        /// </field>
+        /// <field name="Address1" type="String">
+        /// Gets or sets the address1 for this provider.
+        /// </field>
+        /// <field name="Address2" type="String">
+        /// Gets or sets the address2 for this provider.
+        /// </field>
+        /// <field name="City" type="String">
+        /// Gets or sets the city for this provider.
+        /// </field>
+        /// <field name="State" type="String">
+        /// Gets or sets the state for this provider.
+        /// </field>
+        /// <field name="Country" type="String">
+        /// Gets or sets the country for this provider.
+        /// </field>
+        /// <field name="Npi" type="String">
+        /// Gets or sets the npi for this provider.
+        /// </field>
+        /// <field name="Tin" type="Number">
+        /// Gets or sets the tin for this provider.
+        /// </field>
+        /// <field name="details" type="msls.application.Provider.Details">
+        /// Gets the details for this provider.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -98,6 +138,9 @@ window.myapp = msls.application;
         /// <field name="Practices" type="msls.EntitySet">
         /// Gets the Practices entity set.
         /// </field>
+        /// <field name="Providers" type="msls.EntitySet">
+        /// Gets the Providers entity set.
+        /// </field>
         /// <field name="details" type="msls.application.NetworkData.Details">
         /// Gets the details for this data service.
         /// </field>
@@ -123,19 +166,31 @@ window.myapp = msls.application;
 
         Network: $defineEntity(Network, [
             { name: "Id", type: Number },
-            { name: "Name", type: String },
-            { name: "CreateDate", type: Date }
+            { name: "Name", type: String }
         ]),
 
         Practice: $defineEntity(Practice, [
             { name: "Id", type: Number },
             { name: "Name", type: String },
-            { name: "CreateDate", type: Date },
             { name: "Address1", type: String },
             { name: "Address2", type: String },
             { name: "City", type: String },
             { name: "State", type: String },
-            { name: "Country", type: String }
+            { name: "Country", type: String },
+            { name: "Npi", type: String },
+            { name: "Tin", type: Number }
+        ]),
+
+        Provider: $defineEntity(Provider, [
+            { name: "Id", type: Number },
+            { name: "FullName", type: String },
+            { name: "Address1", type: String },
+            { name: "Address2", type: String },
+            { name: "City", type: String },
+            { name: "State", type: String },
+            { name: "Country", type: String },
+            { name: "Npi", type: String },
+            { name: "Tin", type: Number }
         ]),
 
         ApplicationData: $defineDataService(ApplicationData, lightSwitchApplication.rootUri + "/ApplicationData.svc", [
@@ -144,19 +199,27 @@ window.myapp = msls.application;
 
         NetworkData: $defineDataService(NetworkData, lightSwitchApplication.rootUri + "/NetworkData.svc", [
             { name: "Networks", elementType: Network },
-            { name: "Practices", elementType: Practice }
+            { name: "Practices", elementType: Practice },
+            { name: "Providers", elementType: Provider }
         ], [
             {
-                name: "Networks_SingleOrDefault", value: function (Id, Name, CreateDate) {
+                name: "Networks_SingleOrDefault", value: function (Id, Name) {
                     return new $DataServiceQuery({ _entitySet: this.Networks },
-                        lightSwitchApplication.rootUri + "/NetworkData.svc" + "/Networks(" + "Id=" + $toODataString(Id, "Int32?") + "," + "Name=" + $toODataString(Name, "String?") + "," + "CreateDate=" + $toODataString(CreateDate, "DateTime?") + ")"
+                        lightSwitchApplication.rootUri + "/NetworkData.svc" + "/Networks(" + "Id=" + $toODataString(Id, "Int32?") + "," + "Name=" + $toODataString(Name, "String?") + ")"
                     );
                 }
             },
             {
-                name: "Practices_SingleOrDefault", value: function (Id, Name, CreateDate) {
+                name: "Practices_SingleOrDefault", value: function (Id, Name) {
                     return new $DataServiceQuery({ _entitySet: this.Practices },
-                        lightSwitchApplication.rootUri + "/NetworkData.svc" + "/Practices(" + "Id=" + $toODataString(Id, "Int32?") + "," + "Name=" + $toODataString(Name, "String?") + "," + "CreateDate=" + $toODataString(CreateDate, "DateTime?") + ")"
+                        lightSwitchApplication.rootUri + "/NetworkData.svc" + "/Practices(" + "Id=" + $toODataString(Id, "Int32?") + "," + "Name=" + $toODataString(Name, "String?") + ")"
+                    );
+                }
+            },
+            {
+                name: "Providers_SingleOrDefault", value: function (Id, FullName) {
+                    return new $DataServiceQuery({ _entitySet: this.Providers },
+                        lightSwitchApplication.rootUri + "/NetworkData.svc" + "/Providers(" + "Id=" + $toODataString(Id, "Int32?") + "," + "FullName=" + $toODataString(FullName, "String?") + ")"
                     );
                 }
             }

@@ -35,3 +35,39 @@ C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\Netwo
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\obj\Debug\NetworkApp.Server.csprojResolveAssemblyReference.cache
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\obj\Debug\Application.Server.dll
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\obj\Debug\Application.Server.pdb
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\LSSvcGeneratorsTask.mcs
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\LSServerCodeGeneratorsTask.mcs
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Application.Server.dll.config
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Application.Server.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Application.Server.pdb
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.Data.Edm.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.Data.OData.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.Data.Services.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.AppBridge.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.CodeMarker.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.ExportProvider.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.Extensions.Server.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.ManifestService.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.Model.Xaml.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.Server.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.Server.Host.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.EntityFramework.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.OData.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.Server.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.PollingDuplex.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.Spatial.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.WindowsAzure.ServiceRuntime.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\Microsoft.LightSwitch.Server.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.EntityFramework.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.OData.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\bin\Debug\System.ServiceModel.DomainServices.Server.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\obj\Debug\Application.Server.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\obj\Debug\Application.Server.pdb

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\DataSources\NetworkData\Networks.lsml" Checksum="CD782362C20877194CC41A5087A1934331D465E4741D9D80ACD861CE636C4862" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\DataSources\NetworkData\Practices.lsml" Checksum="CFC12D83E7939D2B977B6D3E060D44AC5E90A289905949694E8EDF39AC697819" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\Properties\DataSources\ApplicationData.lsml" Checksum="986A4E2C3BC71E61B26C49DBB7451F9203AA85AB5825740AC6E35E7095E0722C" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\Properties\DataSources\NetworkData.lsml" Checksum="38811DC22306E9792FA059C089374EA6B48A609B6C30B8E552DA1844DA1E8A58" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\Properties\Service.lsml" Checksum="37369C9F99303970815DB718459826D4EF6C7E5CF8C88D1CC65B06109CC56654" />
-    <Document FullPath="C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\NetworkApp\NetworkApp.Server\DataSources\NetworkData\Providers.lsml" Checksum="8A5E99BDC399EA16A2D227D03DBE63FB8F1E3C20B179AFDE5012A87BAC27C598" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\DataSources\NetworkData\Networks.lsml" Checksum="CD782362C20877194CC41A5087A1934331D465E4741D9D80ACD861CE636C4862" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\DataSources\NetworkData\Practices.lsml" Checksum="CFC12D83E7939D2B977B6D3E060D44AC5E90A289905949694E8EDF39AC697819" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\DataSources\NetworkData\Providers.lsml" Checksum="8A5E99BDC399EA16A2D227D03DBE63FB8F1E3C20B179AFDE5012A87BAC27C598" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\Properties\DataSources\ApplicationData.lsml" Checksum="986A4E2C3BC71E61B26C49DBB7451F9203AA85AB5825740AC6E35E7095E0722C" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\Properties\DataSources\NetworkData.lsml" Checksum="38811DC22306E9792FA059C089374EA6B48A609B6C30B8E552DA1844DA1E8A58" />
+    <Document FullPath="C:\GitHub\Elastic-Prototype\Source\TestApplication\NetworkApp\NetworkApp.Server\Properties\Service.lsml" Checksum="37369C9F99303970815DB718459826D4EF6C7E5CF8C88D1CC65B06109CC56654" />
   </Documents>
 </ModelDocumentManifest>

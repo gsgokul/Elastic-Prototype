@@ -31,3 +31,36 @@ C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\Sampl
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\SampleAngularApp\obj\Debug\SampleAngularApp.csprojResolveAssemblyReference.cache
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\SampleAngularApp\obj\Debug\SampleAngularApp.dll
 C:\Users\gsrinivasan\documents\visual studio 2015\Projects\TestApplication\SampleAngularApp\obj\Debug\SampleAngularApp.pdb
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\ApplicationInsights.config
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\csc.exe
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\System.Collections.Immutable.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\vbc.exe
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\VBCSCompiler.exe
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\roslyn\VBCSCompiler.exe.config
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\SampleAngularApp.dll.config
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\SampleAngularApp.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\SampleAngularApp.pdb
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.Web.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.WindowsServer.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.ApplicationInsights.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.Web.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.AI.WindowsServer.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.ApplicationInsights.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\obj\Debug\SampleAngularApp.csprojResolveAssemblyReference.cache
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\obj\Debug\SampleAngularApp.dll
+C:\GitHub\Elastic-Prototype\Source\TestApplication\SampleAngularApp\obj\Debug\SampleAngularApp.pdb

@@ -3,6 +3,1448 @@
   "modules":
   [
     {
+      "homeScreen": { "__id": "ViewPracticeScreen" },
+      "id": "!module",
+      "name": "LightSwitchApplication.NetworkApp.HTMLClient",
+      "logo": "/Content/Images/logo.png",
+      "targetPlatform": "MobileWeb",
+      "version": "1.0.0.0",
+      "shell": { "__id": ":HTMLShell" },
+      "theme": { "__id": ":HTMLTheme" },
+      ":@ModuleNamespace": { "namespace": "LightSwitchApplication" },
+      ":@Partial": { "isPrimary": true },
+      ":@HomeScreen": { "value": { "__id": "ViewPracticeScreen" } },
+      "globalItems":
+      [
+        {
+          "id": "DataWorkspace",
+          "name": "DataWorkspace",
+          "members":
+          [
+            {
+              "id": "DataWorkspace/Members[ApplicationData]",
+              "name": "ApplicationData",
+              "entityContainer": { "__id": "ApplicationData" }
+            },
+            {
+              "id": "DataWorkspace/Members[NetworkData]",
+              "name": "NetworkData",
+              "entityContainer": { "__id": "NetworkData" }
+            }
+          ]
+        },
+        {
+          "id": "LightSwitchServiceApplicationGroup",
+          "name": "LightSwitchServiceApplicationGroup"
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Practice/Properties[Name]" } },
+          "id": "Practice",
+          "name": "Practice",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewPracticeScreen" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewPracticeScreen/Properties[Practice]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "Practice/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Practice/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Practice/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Practice/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Practice/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 100
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Practice/Properties[Address1]",
+              "name": "Address1",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Practice/Properties[Address2]",
+              "name": "Address2",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Practice/Properties[City]",
+              "name": "City",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Practice/Properties[State]",
+              "name": "State",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 2
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Practice/Properties[Country]",
+              "name": "Country",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 20
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Practice/Properties[Npi]",
+              "name": "Npi",
+              "propertyType": { "__id": ":Int64?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Practice/Properties[Tin]",
+              "name": "Tin",
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "id": "ApplicationData",
+          "name": "ApplicationData",
+          "dataProvider": "EntityFrameworkDataProvider",
+          "isIntrinsic": true,
+          ":@Partial": { "isPrimary": true },
+          "entitySets":
+          [
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Network/Properties[Name]" } },
+          "id": "Network",
+          "name": "Network",
+          "methods":
+          [
+            {
+              "id": "Network/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Network/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Network/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Network/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Network/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 100
+              },
+              ":@AnsiConstraint": { }
+            }
+          ]
+        },
+        {
+          "id": "NetworkData",
+          "name": "NetworkData",
+          "dataProvider": "EntityFrameworkDataProvider",
+          ":@Partial": { "isPrimary": true },
+          "entitySets":
+          [
+            {
+              "id": "NetworkData/Members[Networks]",
+              "name": "Networks",
+              "elementType": { "__id": "Network" },
+              "entityType": { "__id": "Network" }
+            },
+            {
+              "id": "NetworkData/Members[Practices]",
+              "name": "Practices",
+              "elementType": { "__id": "Practice" },
+              "entityType": { "__id": "Practice" }
+            },
+            {
+              "id": "NetworkData/Members[Providers]",
+              "name": "Providers",
+              "elementType": { "__id": "Provider" },
+              "entityType": { "__id": "Provider" }
+            }
+          ],
+          "queryOperations":
+          [
+            {
+              "id": "NetworkData/Members[Networks_Single]",
+              "name": "Networks_Single",
+              "elementType": { "__id": "Network" },
+              "query": { "__id": "NetworkData/Members[Networks_Single]" },
+              "returnType": { "__id": "Network" },
+              "source":
+              {
+                "member": { "__id": "NetworkData/Members[Networks]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "NetworkData/Members[Networks_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "NetworkData/Members[Networks_Single]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "NetworkData/Members[Networks_SingleOrDefault]",
+              "name": "Networks_SingleOrDefault",
+              "elementType": { "__id": "Network" },
+              "query": { "__id": "NetworkData/Members[Networks_SingleOrDefault]" },
+              "returnType": { "__id": "Network" },
+              "source":
+              {
+                "member": { "__id": "NetworkData/Members[Networks]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "NetworkData/Members[Networks_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "NetworkData/Members[Networks_SingleOrDefault]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "NetworkData/Members[Practices_Single]",
+              "name": "Practices_Single",
+              "elementType": { "__id": "Practice" },
+              "query": { "__id": "NetworkData/Members[Practices_Single]" },
+              "returnType": { "__id": "Practice" },
+              "source":
+              {
+                "member": { "__id": "NetworkData/Members[Practices]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "NetworkData/Members[Practices_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "NetworkData/Members[Practices_Single]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "NetworkData/Members[Practices_SingleOrDefault]",
+              "name": "Practices_SingleOrDefault",
+              "elementType": { "__id": "Practice" },
+              "query": { "__id": "NetworkData/Members[Practices_SingleOrDefault]" },
+              "returnType": { "__id": "Practice" },
+              "source":
+              {
+                "member": { "__id": "NetworkData/Members[Practices]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "NetworkData/Members[Practices_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "NetworkData/Members[Practices_SingleOrDefault]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "NetworkData/Members[Providers_Single]",
+              "name": "Providers_Single",
+              "elementType": { "__id": "Provider" },
+              "query": { "__id": "NetworkData/Members[Providers_Single]" },
+              "returnType": { "__id": "Provider" },
+              "source":
+              {
+                "member": { "__id": "NetworkData/Members[Providers]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "NetworkData/Members[Providers_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "NetworkData/Members[Providers_Single]/Parameters[FullName]",
+                  "name": "FullName",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "NetworkData/Members[Providers_SingleOrDefault]",
+              "name": "Providers_SingleOrDefault",
+              "elementType": { "__id": "Provider" },
+              "query": { "__id": "NetworkData/Members[Providers_SingleOrDefault]" },
+              "returnType": { "__id": "Provider" },
+              "source":
+              {
+                "member": { "__id": "NetworkData/Members[Providers]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "NetworkData/Members[Providers_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "NetworkData/Members[Providers_SingleOrDefault]/Parameters[FullName]",
+                  "name": "FullName",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Provider/Properties[FullName]" } },
+          "id": "Provider",
+          "name": "Provider",
+          "methods":
+          [
+            {
+              "id": "Provider/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Provider/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Provider/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Provider/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Provider/Properties[FullName]",
+              "name": "FullName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 100
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Provider/Properties[Address1]",
+              "name": "Address1",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Provider/Properties[Address2]",
+              "name": "Address2",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Provider/Properties[City]",
+              "name": "City",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Provider/Properties[State]",
+              "name": "State",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 2
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Provider/Properties[Country]",
+              "name": "Country",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 20
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Provider/Properties[Npi]",
+              "name": "Npi",
+              "propertyType": { "__id": ":Int64?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Provider/Properties[Tin]",
+              "name": "Tin",
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Add Edit Practice Screen",
+          "id": "AddEditPracticeScreen",
+          "name": "AddEditPracticeScreen",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[NetworkData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Group",
+                    "name": "Group",
+                    "kind": "Tab",
+                    "view": { "__id": ":ColumnsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Practice",
+                        "name": "Practice",
+                        "kind": "Details",
+                        "view": { "__id": ":RowsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditPracticeScreen/Properties[Practice]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Id",
+                            "name": "Id",
+                            "kind": "Value",
+                            "view": { "__id": ":TextBox" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Id]" }
+                            }
+                          },
+                          {
+                            "displayName": "Name",
+                            "name": "Name",
+                            "kind": "Value",
+                            "view": { "__id": ":TextBox" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Name]" }
+                            }
+                          },
+                          {
+                            "displayName": "Address1",
+                            "name": "Address1",
+                            "kind": "Value",
+                            "view": { "__id": ":TextBox" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Address1]" }
+                            }
+                          },
+                          {
+                            "displayName": "Address2",
+                            "name": "Address2",
+                            "kind": "Value",
+                            "view": { "__id": ":TextBox" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Address2]" }
+                            }
+                          },
+                          {
+                            "displayName": "City",
+                            "name": "City",
+                            "kind": "Value",
+                            "view": { "__id": ":TextBox" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[City]" }
+                            }
+                          },
+                          {
+                            "displayName": "State",
+                            "name": "State",
+                            "kind": "Value",
+                            "view": { "__id": ":TextBox" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[State]" }
+                            }
+                          },
+                          {
+                            "displayName": "Country",
+                            "name": "Country",
+                            "kind": "Value",
+                            "view": { "__id": ":TextBox" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Country]" }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditPracticeScreen/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditPracticeScreen/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditPracticeScreen/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditPracticeScreen/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditPracticeScreen/Properties[Practice]",
+              "name": "Practice",
+              "elementType": { "__id": "Practice" },
+              "propertyType": { "__id": "Practice" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "PracticeScreens",
+          "id": "BrowsePracticeScreens",
+          "name": "BrowsePracticeScreens",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[NetworkData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "PracticeScreens",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Practice Screen List",
+                    "name": "PracticeScreenList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Practices",
+                        "name": "Practices",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowsePracticeScreens/Properties[Practices]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Practice/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Id",
+                                "name": "Id",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Practice/Properties[Id]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewPracticeScreen]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowsePracticeScreens/Properties[Practices]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewPracticeScreen]/Parameters[Practice]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowsePracticeScreens/Properties[Practices]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Practice/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Search",
+                        "name": "SearchPracticeScreens",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowsePracticeScreens/Properties[Practices]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$Practice/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowsePracticeScreens/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowsePracticeScreens/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowsePracticeScreens/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowsePracticeScreens/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowsePracticeScreens/Properties[Practices]",
+              "name": "Practices",
+              "pageSize": 45,
+              "elementType": { "__id": "Practice" },
+              "propertyType": { "__id": "CollectionView$Practice" },
+              "query":
+              {
+                "id": "BrowsePracticeScreens/Properties[Practices]/Query",
+                "name": "PracticesQuery",
+                "elementType": { "__id": "Practice" },
+                "returnType": { "__id": "Practice*" },
+                "source":
+                {
+                  "member": { "__id": "NetworkData/Members[Practices]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowsePracticeScreens/Properties[Practices]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "PracticeScreen",
+          "id": "ViewPracticeScreen",
+          "name": "ViewPracticeScreen",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[NetworkData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "PracticeScreen",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Group",
+                    "name": "Group",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Practice",
+                        "name": "Practice",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewPracticeScreen/Properties[Practice]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Id",
+                            "name": "Id",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Id]" }
+                            }
+                          },
+                          {
+                            "displayName": "Name",
+                            "name": "Name",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Name]" }
+                            }
+                          },
+                          {
+                            "displayName": "Address1",
+                            "name": "Address1",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Address1]" }
+                            }
+                          },
+                          {
+                            "displayName": "Address2",
+                            "name": "Address2",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Address2]" }
+                            }
+                          },
+                          {
+                            "displayName": "City",
+                            "name": "City",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[City]" }
+                            }
+                          },
+                          {
+                            "displayName": "State",
+                            "name": "State",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[State]" }
+                            }
+                          },
+                          {
+                            "displayName": "Country",
+                            "name": "Country",
+                            "kind": "Value",
+                            "view": { "__id": ":Text" },
+                            "dataSource":
+                            {
+                              "member": { "__id": "Practice/Properties[Country]" }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewPracticeScreen/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewPracticeScreen/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewPracticeScreen/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewPracticeScreen/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewPracticeScreen/Methods[Method]",
+              "name": "Method"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewPracticeScreen/Properties[Practice]",
+              "name": "Practice",
+              "elementType": { "__id": "Practice" },
+              "propertyType": { "__id": "Practice" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "id": "Practice*",
+          "name": "Practice*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Practice" }
+        },
+        {
+          "id": "CollectionView$Practice",
+          "name": "CollectionView$Practice",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Practice" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Practice/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Practice" }
+            },
+            {
+              "id": "CollectionView$Practice/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Practice" }
+            },
+            {
+              "id": "CollectionView$Practice/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Practice" }
+            },
+            {
+              "id": "CollectionView$Practice/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Practice/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Practice/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Practice/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Practice/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Practice/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Practice" }
+            }
+          ]
+        },
+        {
+          "id": "Network*",
+          "name": "Network*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Network" }
+        },
+        {
+          "id": "CollectionView$Network",
+          "name": "CollectionView$Network",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Network" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Network/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Network" }
+            },
+            {
+              "id": "CollectionView$Network/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Network" }
+            },
+            {
+              "id": "CollectionView$Network/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Network" }
+            },
+            {
+              "id": "CollectionView$Network/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Network/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Network/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Network/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Network/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Network/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Network" }
+            }
+          ]
+        },
+        {
+          "id": "Provider*",
+          "name": "Provider*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Provider" }
+        },
+        {
+          "id": "CollectionView$Provider",
+          "name": "CollectionView$Provider",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Provider" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Provider/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Provider" }
+            },
+            {
+              "id": "CollectionView$Provider/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Provider" }
+            },
+            {
+              "id": "CollectionView$Provider/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Provider" }
+            },
+            {
+              "id": "CollectionView$Provider/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Provider/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Provider/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Provider/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Provider/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Provider/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Provider" }
+            }
+          ]
+        }
+      ],
+      "methods":
+      [
+        {
+          "id": "!module/Methods[showAddEditPracticeScreen]",
+          "name": "showAddEditPracticeScreen",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditPracticeScreen" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditPracticeScreen]/Parameters[Practice]",
+              "name": "Practice",
+              "parameterType": { "__id": "Practice" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowsePracticeScreens]",
+          "name": "showBrowsePracticeScreens",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowsePracticeScreens" } }
+        },
+        {
+          "id": "!module/Methods[showViewPracticeScreen]",
+          "name": "showViewPracticeScreen",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewPracticeScreen" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewPracticeScreen]/Parameters[Practice]",
+              "name": "Practice",
+              "parameterType": { "__id": "Practice" }
+            }
+          ]
+        }
+      ],
+      "navigationItems":
+      [
+        {
+          "id": "!module/NavigationItems[link]",
+          "name": "link",
+          "method": { "__id": "!module/Methods[showBrowsePracticeScreens]" }
+        }
+      ]
+    },
+    {
+      "id": "Microsoft.LightSwitch.Extensions:!module",
+      "name": "Microsoft.LightSwitch.Extensions",
+      "globalItems":
+      [
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
+          "name": "EmailAddress",
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@EmailAddressValidation": { "domainRequired": true }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Image",
+          "name": "Image",
+          "underlyingType": { "__id": ":Binary" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Money",
+          "name": "Money",
+          "underlyingType": { "__id": ":Decimal" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
+          "name": "PhoneNumber",
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@PhoneNumberValidation": { "formats": "C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Percent",
+          "name": "Percent",
+          "underlyingType": { "__id": ":Decimal" },
+          "Microsoft.LightSwitch.Extensions:@FormatParameter": { "decimalDigits": 2 },
+          ":@DecimalConstraint":
+          {
+            "scale": 9
+          }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress",
+          "name": "WebAddress",
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@WebAddressValidation": { }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress*",
+          "name": "EmailAddress*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?",
+          "name": "EmailAddress?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?*",
+          "name": "EmailAddress?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Image*",
+          "name": "Image*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Image?",
+          "name": "Image?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Image?*",
+          "name": "Image?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Money*",
+          "name": "Money*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Money?",
+          "name": "Money?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Money?*",
+          "name": "Money?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber*",
+          "name": "PhoneNumber*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?",
+          "name": "PhoneNumber?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?*",
+          "name": "PhoneNumber?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Percent*",
+          "name": "Percent*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Percent?",
+          "name": "Percent?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Percent?*",
+          "name": "Percent?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress*",
+          "name": "WebAddress*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress?",
+          "name": "WebAddress?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress?*",
+          "name": "WebAddress?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress?" }
+        }
+      ]
+    },
+    {
       "id": ":!module",
       "name": "Microsoft.LightSwitch.MobileWeb",
       "targetPlatform": "MobileWeb",
@@ -1169,6 +2611,159 @@
       "globalItems":
       [
         {
+          "id": ":RelativeDates",
+          "name": "RelativeDates",
+          "globalValues":
+          [
+            {
+              "id": ":RelativeDates/GlobalValues[Now]",
+              "name": "Now",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[Today]",
+              "name": "Today",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfDay]",
+              "name": "EndOfDay",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfWeek]",
+              "name": "StartOfWeek",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfWeek]",
+              "name": "EndOfWeek",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfMonth]",
+              "name": "StartOfMonth",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfMonth]",
+              "name": "EndOfMonth",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfQuarter]",
+              "name": "StartOfQuarter",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfQuarter]",
+              "name": "EndOfQuarter",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfYear]",
+              "name": "StartOfYear",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfYear]",
+              "name": "EndOfYear",
+              "returnType": { "__id": ":DateTime" }
+            }
+          ]
+        },
+        {
+          "id": ":RelativeDateTimeOffsetDates",
+          "name": "RelativeDateTimeOffsetDates",
+          "globalValues":
+          [
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Now]",
+              "name": "Now",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Today]",
+              "name": "Today",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfDay]",
+              "name": "EndOfDay",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfWeek]",
+              "name": "StartOfWeek",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfWeek]",
+              "name": "EndOfWeek",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfMonth]",
+              "name": "StartOfMonth",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfMonth]",
+              "name": "EndOfMonth",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfQuarter]",
+              "name": "StartOfQuarter",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfQuarter]",
+              "name": "EndOfQuarter",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfYear]",
+              "name": "StartOfYear",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfYear]",
+              "name": "EndOfYear",
+              "returnType": { "__id": ":DateTimeOffset" }
+            }
+          ]
+        },
+        {
+          "id": ":WellKnownPeople",
+          "name": "WellKnownPeople",
+          "globalValues":
+          [
+            {
+              "id": ":WellKnownPeople/GlobalValues[CurrentUser]",
+              "name": "CurrentUser",
+              "returnType": { "__id": ":Person" }
+            },
+            {
+              "id": ":WellKnownPeople/GlobalValues[AnonymousUser]",
+              "name": "AnonymousUser",
+              "returnType": { "__id": ":Person" }
+            }
+          ]
+        },
+        {
+          "__isSemanticType": 1,
+          "id": ":Date",
+          "name": "Date",
+          "underlyingType": { "__id": ":DateTime" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": ":Person",
+          "name": "Person",
+          "underlyingType": { "__id": ":String" }
+        },
+        {
           "__isPrimitiveType": 1,
           "id": ":Binary",
           "name": "Binary",
@@ -1836,1456 +3431,6 @@
           "name": "Person?*",
           "kind": "Enumerable",
           "elementType": { "__id": ":Person?" }
-        },
-        {
-          "id": ":RelativeDates",
-          "name": "RelativeDates",
-          "globalValues":
-          [
-            {
-              "id": ":RelativeDates/GlobalValues[Now]",
-              "name": "Now",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[Today]",
-              "name": "Today",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[EndOfDay]",
-              "name": "EndOfDay",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[StartOfWeek]",
-              "name": "StartOfWeek",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[EndOfWeek]",
-              "name": "EndOfWeek",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[StartOfMonth]",
-              "name": "StartOfMonth",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[EndOfMonth]",
-              "name": "EndOfMonth",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[StartOfQuarter]",
-              "name": "StartOfQuarter",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[EndOfQuarter]",
-              "name": "EndOfQuarter",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[StartOfYear]",
-              "name": "StartOfYear",
-              "returnType": { "__id": ":DateTime" }
-            },
-            {
-              "id": ":RelativeDates/GlobalValues[EndOfYear]",
-              "name": "EndOfYear",
-              "returnType": { "__id": ":DateTime" }
-            }
-          ]
-        },
-        {
-          "id": ":RelativeDateTimeOffsetDates",
-          "name": "RelativeDateTimeOffsetDates",
-          "globalValues":
-          [
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Now]",
-              "name": "Now",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Today]",
-              "name": "Today",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfDay]",
-              "name": "EndOfDay",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfWeek]",
-              "name": "StartOfWeek",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfWeek]",
-              "name": "EndOfWeek",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfMonth]",
-              "name": "StartOfMonth",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfMonth]",
-              "name": "EndOfMonth",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfQuarter]",
-              "name": "StartOfQuarter",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfQuarter]",
-              "name": "EndOfQuarter",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfYear]",
-              "name": "StartOfYear",
-              "returnType": { "__id": ":DateTimeOffset" }
-            },
-            {
-              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfYear]",
-              "name": "EndOfYear",
-              "returnType": { "__id": ":DateTimeOffset" }
-            }
-          ]
-        },
-        {
-          "id": ":WellKnownPeople",
-          "name": "WellKnownPeople",
-          "globalValues":
-          [
-            {
-              "id": ":WellKnownPeople/GlobalValues[CurrentUser]",
-              "name": "CurrentUser",
-              "returnType": { "__id": ":Person" }
-            },
-            {
-              "id": ":WellKnownPeople/GlobalValues[AnonymousUser]",
-              "name": "AnonymousUser",
-              "returnType": { "__id": ":Person" }
-            }
-          ]
-        },
-        {
-          "__isSemanticType": 1,
-          "id": ":Date",
-          "name": "Date",
-          "underlyingType": { "__id": ":DateTime" }
-        },
-        {
-          "__isSemanticType": 1,
-          "id": ":Person",
-          "name": "Person",
-          "underlyingType": { "__id": ":String" }
-        }
-      ]
-    },
-    {
-      "id": "Microsoft.LightSwitch.Extensions:!module",
-      "name": "Microsoft.LightSwitch.Extensions",
-      "globalItems":
-      [
-        {
-          "id": "Microsoft.LightSwitch.Extensions:EmailAddress*",
-          "name": "EmailAddress*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
-        },
-        {
-          "__isNullableType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?",
-          "name": "EmailAddress?",
-          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?*",
-          "name": "EmailAddress?*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress?" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:Image*",
-          "name": "Image*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
-        },
-        {
-          "__isNullableType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:Image?",
-          "name": "Image?",
-          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:Image?*",
-          "name": "Image?*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image?" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:Money*",
-          "name": "Money*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
-        },
-        {
-          "__isNullableType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:Money?",
-          "name": "Money?",
-          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:Money?*",
-          "name": "Money?*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money?" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber*",
-          "name": "PhoneNumber*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
-        },
-        {
-          "__isNullableType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?",
-          "name": "PhoneNumber?",
-          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?*",
-          "name": "PhoneNumber?*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber?" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:Percent*",
-          "name": "Percent*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
-        },
-        {
-          "__isNullableType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:Percent?",
-          "name": "Percent?",
-          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:Percent?*",
-          "name": "Percent?*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent?" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:WebAddress*",
-          "name": "WebAddress*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
-        },
-        {
-          "__isNullableType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:WebAddress?",
-          "name": "WebAddress?",
-          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
-        },
-        {
-          "id": "Microsoft.LightSwitch.Extensions:WebAddress?*",
-          "name": "WebAddress?*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress?" }
-        },
-        {
-          "__isSemanticType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
-          "name": "EmailAddress",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@EmailAddressValidation": { "domainRequired": true }
-        },
-        {
-          "__isSemanticType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:Image",
-          "name": "Image",
-          "underlyingType": { "__id": ":Binary" }
-        },
-        {
-          "__isSemanticType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:Money",
-          "name": "Money",
-          "underlyingType": { "__id": ":Decimal" }
-        },
-        {
-          "__isSemanticType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
-          "name": "PhoneNumber",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@PhoneNumberValidation": { "formats": "C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN" }
-        },
-        {
-          "__isSemanticType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:Percent",
-          "name": "Percent",
-          "underlyingType": { "__id": ":Decimal" },
-          "Microsoft.LightSwitch.Extensions:@FormatParameter": { "decimalDigits": 2 },
-          ":@DecimalConstraint":
-          {
-            "scale": 9
-          }
-        },
-        {
-          "__isSemanticType": 1,
-          "id": "Microsoft.LightSwitch.Extensions:WebAddress",
-          "name": "WebAddress",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@WebAddressValidation": { }
-        }
-      ]
-    },
-    {
-      "homeScreen": { "__id": "ViewPracticeScreen" },
-      "id": "!module",
-      "name": "LightSwitchApplication.NetworkApp.HTMLClient",
-      "logo": "/Content/Images/logo.png",
-      "targetPlatform": "MobileWeb",
-      "version": "1.0.0.0",
-      "shell": { "__id": ":HTMLShell" },
-      "theme": { "__id": ":HTMLTheme" },
-      ":@ModuleNamespace": { "namespace": "LightSwitchApplication" },
-      ":@Partial": { "isPrimary": true },
-      ":@HomeScreen": { "value": { "__id": "ViewPracticeScreen" } },
-      "globalItems":
-      [
-        {
-          "id": "DataWorkspace",
-          "name": "DataWorkspace",
-          "members":
-          [
-            {
-              "id": "DataWorkspace/Members[ApplicationData]",
-              "name": "ApplicationData",
-              "entityContainer": { "__id": "ApplicationData" }
-            },
-            {
-              "id": "DataWorkspace/Members[NetworkData]",
-              "name": "NetworkData",
-              "entityContainer": { "__id": "NetworkData" }
-            }
-          ]
-        },
-        {
-          "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup"
-        },
-        {
-          "id": "Practice*",
-          "name": "Practice*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Practice" }
-        },
-        {
-          "id": "CollectionView$Practice",
-          "name": "CollectionView$Practice",
-          "kind": "CollectionView",
-          "elementType": { "__id": "Practice" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$Practice/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "Practice" }
-            },
-            {
-              "id": "CollectionView$Practice/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "Practice" }
-            },
-            {
-              "id": "CollectionView$Practice/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "Practice" }
-            },
-            {
-              "id": "CollectionView$Practice/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$Practice/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$Practice/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$Practice/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$Practice/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$Practice/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "Practice" }
-            }
-          ]
-        },
-        {
-          "id": "Network*",
-          "name": "Network*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Network" }
-        },
-        {
-          "id": "CollectionView$Network",
-          "name": "CollectionView$Network",
-          "kind": "CollectionView",
-          "elementType": { "__id": "Network" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$Network/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "Network" }
-            },
-            {
-              "id": "CollectionView$Network/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "Network" }
-            },
-            {
-              "id": "CollectionView$Network/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "Network" }
-            },
-            {
-              "id": "CollectionView$Network/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$Network/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$Network/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$Network/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$Network/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$Network/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "Network" }
-            }
-          ]
-        },
-        {
-          "id": "ApplicationData",
-          "name": "ApplicationData",
-          "dataProvider": "EntityFrameworkDataProvider",
-          "isIntrinsic": true,
-          ":@Partial": { "isPrimary": true },
-          "entitySets":
-          [
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Network/Properties[Name]" } },
-          "id": "Network",
-          "name": "Network",
-          "methods":
-          [
-            {
-              "id": "Network/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "Network/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "Network/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "Network/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "Network/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 100
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "Network/Properties[CreateDate]",
-              "name": "CreateDate",
-              "propertyType": { "__id": ":DateTime" },
-              ":@Required": { },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Practice/Properties[Name]" } },
-          "id": "Practice",
-          "name": "Practice",
-          ":@DefaultScreen":
-          {
-            "value": { "__id": "ViewPracticeScreen" },
-            ":@ScreenParameterMapping":
-            {
-              "screenParameter": { "__id": "ViewPracticeScreen/Properties[Practice]" }
-            }
-          },
-          "methods":
-          [
-            {
-              "id": "Practice/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "Practice/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "Practice/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "Practice/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "Practice/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 100
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "Practice/Properties[CreateDate]",
-              "name": "CreateDate",
-              "propertyType": { "__id": ":DateTime" },
-              ":@Required": { },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Practice/Properties[Address1]",
-              "name": "Address1",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 100
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "Practice/Properties[Address2]",
-              "name": "Address2",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 100
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "Practice/Properties[City]",
-              "name": "City",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "Practice/Properties[State]",
-              "name": "State",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 2
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "Practice/Properties[Country]",
-              "name": "Country",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 20
-              },
-              ":@AnsiConstraint": { }
-            }
-          ]
-        },
-        {
-          "id": "NetworkData",
-          "name": "NetworkData",
-          "dataProvider": "EntityFrameworkDataProvider",
-          ":@Partial": { "isPrimary": true },
-          "entitySets":
-          [
-            {
-              "id": "NetworkData/Members[Networks]",
-              "name": "Networks",
-              "elementType": { "__id": "Network" },
-              "entityType": { "__id": "Network" }
-            },
-            {
-              "id": "NetworkData/Members[Practices]",
-              "name": "Practices",
-              "elementType": { "__id": "Practice" },
-              "entityType": { "__id": "Practice" }
-            }
-          ],
-          "queryOperations":
-          [
-            {
-              "id": "NetworkData/Members[Networks_Single]",
-              "name": "Networks_Single",
-              "elementType": { "__id": "Network" },
-              "query": { "__id": "NetworkData/Members[Networks_Single]" },
-              "returnType": { "__id": "Network" },
-              "source":
-              {
-                "member": { "__id": "NetworkData/Members[Networks]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "NetworkData/Members[Networks_Single]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                },
-                {
-                  "id": "NetworkData/Members[Networks_Single]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "NetworkData/Members[Networks_Single]/Parameters[CreateDate]",
-                  "name": "CreateDate",
-                  "parameterType": { "__id": ":DateTime?" }
-                }
-              ]
-            },
-            {
-              "id": "NetworkData/Members[Networks_SingleOrDefault]",
-              "name": "Networks_SingleOrDefault",
-              "elementType": { "__id": "Network" },
-              "query": { "__id": "NetworkData/Members[Networks_SingleOrDefault]" },
-              "returnType": { "__id": "Network" },
-              "source":
-              {
-                "member": { "__id": "NetworkData/Members[Networks]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "NetworkData/Members[Networks_SingleOrDefault]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                },
-                {
-                  "id": "NetworkData/Members[Networks_SingleOrDefault]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "NetworkData/Members[Networks_SingleOrDefault]/Parameters[CreateDate]",
-                  "name": "CreateDate",
-                  "parameterType": { "__id": ":DateTime?" }
-                }
-              ]
-            },
-            {
-              "id": "NetworkData/Members[Practices_Single]",
-              "name": "Practices_Single",
-              "elementType": { "__id": "Practice" },
-              "query": { "__id": "NetworkData/Members[Practices_Single]" },
-              "returnType": { "__id": "Practice" },
-              "source":
-              {
-                "member": { "__id": "NetworkData/Members[Practices]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "NetworkData/Members[Practices_Single]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                },
-                {
-                  "id": "NetworkData/Members[Practices_Single]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "NetworkData/Members[Practices_Single]/Parameters[CreateDate]",
-                  "name": "CreateDate",
-                  "parameterType": { "__id": ":DateTime?" }
-                }
-              ]
-            },
-            {
-              "id": "NetworkData/Members[Practices_SingleOrDefault]",
-              "name": "Practices_SingleOrDefault",
-              "elementType": { "__id": "Practice" },
-              "query": { "__id": "NetworkData/Members[Practices_SingleOrDefault]" },
-              "returnType": { "__id": "Practice" },
-              "source":
-              {
-                "member": { "__id": "NetworkData/Members[Practices]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "NetworkData/Members[Practices_SingleOrDefault]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
-                },
-                {
-                  "id": "NetworkData/Members[Practices_SingleOrDefault]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "NetworkData/Members[Practices_SingleOrDefault]/Parameters[CreateDate]",
-                  "name": "CreateDate",
-                  "parameterType": { "__id": ":DateTime?" }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "displayName": "PracticeScreen",
-          "id": "ViewPracticeScreen",
-          "name": "ViewPracticeScreen",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[NetworkData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "PracticeScreen",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Group",
-                    "name": "Group",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Practice",
-                        "name": "Practice",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "ViewPracticeScreen/Properties[Practice]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Id]" }
-                            }
-                          },
-                          {
-                            "displayName": "Name",
-                            "name": "Name",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Name]" }
-                            }
-                          },
-                          {
-                            "displayName": "Create Date",
-                            "name": "CreateDate",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[CreateDate]" }
-                            }
-                          },
-                          {
-                            "displayName": "Address1",
-                            "name": "Address1",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Address1]" }
-                            }
-                          },
-                          {
-                            "displayName": "Address2",
-                            "name": "Address2",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Address2]" }
-                            }
-                          },
-                          {
-                            "displayName": "City",
-                            "name": "City",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[City]" }
-                            }
-                          },
-                          {
-                            "displayName": "State",
-                            "name": "State",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[State]" }
-                            }
-                          },
-                          {
-                            "displayName": "Country",
-                            "name": "Country",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Country]" }
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "propertySources":
-                [
-                  {
-                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
-                    "value": true
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "ViewPracticeScreen/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "ViewPracticeScreen/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "ViewPracticeScreen/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "ViewPracticeScreen/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "ViewPracticeScreen/Methods[Method]",
-              "name": "Method"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "ViewPracticeScreen/Properties[Practice]",
-              "name": "Practice",
-              "elementType": { "__id": "Practice" },
-              "propertyType": { "__id": "Practice" },
-              ":@IsParameter": { }
-            }
-          ]
-        },
-        {
-          "displayName": "PracticeScreens",
-          "id": "BrowsePracticeScreens",
-          "name": "BrowsePracticeScreens",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[NetworkData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "PracticeScreens",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Practice Screen List",
-                    "name": "PracticeScreenList",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Practices",
-                        "name": "Practices",
-                        "kind": "Collection",
-                        "view": { "__id": ":List" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "BrowsePracticeScreens/Properties[Practices]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "rows",
-                            "name": "rows",
-                            "kind": "Details",
-                            "view": { "__id": ":RowsLayout" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                              ]
-                            },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Practice/Properties[Name]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Large"
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Id",
-                                "name": "Id",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Practice/Properties[Id]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Create Date",
-                                "name": "CreateDate",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Practice/Properties[CreateDate]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                "value": "FitToContent"
-                              }
-                            ]
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showViewPracticeScreen]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowsePracticeScreens/Properties[Practices]" } },
-                              "arguments":
-                              [
-                                {
-                                  "parameter": { "__id": "!module/Methods[showViewPracticeScreen]/Parameters[Practice]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "BrowsePracticeScreens/Properties[Practices]" }
-                                      },
-                                      {
-                                        "member": { "__id": "CollectionView$Practice/Properties[selectedItem]" }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    ],
-                    "commandItems":
-                    [
-                      {
-                        "displayName": "Search",
-                        "name": "SearchPracticeScreens",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "BrowsePracticeScreens/Properties[Practices]" }
-                                },
-                                {
-                                  "target": { "__id": "CollectionView$Practice/Methods[showSearch]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-search"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "propertySources":
-                [
-                  {
-                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
-                    "value": true
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "BrowsePracticeScreens/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "BrowsePracticeScreens/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "BrowsePracticeScreens/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "BrowsePracticeScreens/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "BrowsePracticeScreens/Properties[Practices]",
-              "name": "Practices",
-              "pageSize": 45,
-              "elementType": { "__id": "Practice" },
-              "propertyType": { "__id": "CollectionView$Practice" },
-              "query":
-              {
-                "id": "BrowsePracticeScreens/Properties[Practices]/Query",
-                "name": "PracticesQuery",
-                "elementType": { "__id": "Practice" },
-                "returnType": { "__id": "Practice*" },
-                "source":
-                {
-                  "member": { "__id": "NetworkData/Members[Practices]" }
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "BrowsePracticeScreens/Properties[Practices]/Query" }
-              }
-            }
-          ]
-        },
-        {
-          "displayName": "Add Edit Practice Screen",
-          "id": "AddEditPracticeScreen",
-          "name": "AddEditPracticeScreen",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[NetworkData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Group",
-                    "name": "Group",
-                    "kind": "Tab",
-                    "view": { "__id": ":ColumnsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Practice",
-                        "name": "Practice",
-                        "kind": "Details",
-                        "view": { "__id": ":RowsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "AddEditPracticeScreen/Properties[Practice]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Id]" }
-                            }
-                          },
-                          {
-                            "displayName": "Name",
-                            "name": "Name",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Name]" }
-                            }
-                          },
-                          {
-                            "displayName": "Create Date",
-                            "name": "CreateDate",
-                            "kind": "Value",
-                            "view": { "__id": ":DateTimePicker" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[CreateDate]" }
-                            }
-                          },
-                          {
-                            "displayName": "Address1",
-                            "name": "Address1",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Address1]" }
-                            }
-                          },
-                          {
-                            "displayName": "Address2",
-                            "name": "Address2",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Address2]" }
-                            }
-                          },
-                          {
-                            "displayName": "City",
-                            "name": "City",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[City]" }
-                            }
-                          },
-                          {
-                            "displayName": "State",
-                            "name": "State",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[State]" }
-                            }
-                          },
-                          {
-                            "displayName": "Country",
-                            "name": "Country",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
-                            {
-                              "member": { "__id": "Practice/Properties[Country]" }
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "AddEditPracticeScreen/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "AddEditPracticeScreen/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "AddEditPracticeScreen/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "AddEditPracticeScreen/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "AddEditPracticeScreen/Properties[Practice]",
-              "name": "Practice",
-              "elementType": { "__id": "Practice" },
-              "propertyType": { "__id": "Practice" },
-              ":@IsParameter": { }
-            }
-          ]
-        }
-      ],
-      "methods":
-      [
-        {
-          "id": "!module/Methods[showViewPracticeScreen]",
-          "name": "showViewPracticeScreen",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewPracticeScreen" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showViewPracticeScreen]/Parameters[Practice]",
-              "name": "Practice",
-              "parameterType": { "__id": "Practice" }
-            }
-          ]
-        },
-        {
-          "id": "!module/Methods[showBrowsePracticeScreens]",
-          "name": "showBrowsePracticeScreens",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowsePracticeScreens" } }
-        },
-        {
-          "id": "!module/Methods[showAddEditPracticeScreen]",
-          "name": "showAddEditPracticeScreen",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditPracticeScreen" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showAddEditPracticeScreen]/Parameters[Practice]",
-              "name": "Practice",
-              "parameterType": { "__id": "Practice" }
-            }
-          ]
-        }
-      ],
-      "navigationItems":
-      [
-        {
-          "id": "!module/NavigationItems[link]",
-          "name": "link",
-          "method": { "__id": "!module/Methods[showBrowsePracticeScreens]" }
         }
       ]
     }
